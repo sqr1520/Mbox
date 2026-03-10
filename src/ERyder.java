@@ -4,22 +4,36 @@ class ERyder {
     private int batteryLevel;
     private boolean isAvailable;
     private double kmDriven;
+    public static final String COMPANY_NAME = "ERyder";        
+    public static final double BASE_FARE = 1.0;        
+    public static final double PER_MINUTE_FARE =0.5;
+    private int totalUsageInMinutes;
+    private double totalFare;
+    public static final String LINKED_ACCOUNT;        
+    public static final long LINKED_PHONE_NUMBER;
 
     public ERyder() {
-        public static final String COMPANY_NAME = "ERyder";
         this.bikeID = 0;
         this.batteryLevel = 0;
         this.isAvailable = false;
         this.kmDriven = 0.0;
+        this.totalUsageInMinutes = 0;
+        this.totalFare = 0.0;
+        this.LINKED_ACCOUNT = idonnotknow;
+        this.LINKED_PHONE_NUMBER = 123456789;
         
     }
 
 
-    public ERyder(int bikeID, int batteryLevel, boolean isAvailable, double kmDriven) {
+    public ERyder(int bikeID, int batteryLevel, boolean isAvailable, double kmDriven, String LINKED_ACCOUNT, long LINKED_PHONE_NUMBER, int totalUsageInMinutes, double totalFare) {
         this.bikeID = bikeID;
         this.setBatteryLevel(batteryLevel);
         this.isAvailable = isAvailable;
         this.kmDriven = kmDriven;
+        this.LINKED_ACCOUNT =LINKED_ACCOUNT;
+        this.LINKED_PHONE_NUMBER = LINKED_PHONE_NUMBER;
+        this.totalFare =totalFare;
+        this.totalUsageInMinutes = totalUsageInMinutes;
     }
 
     public void ride() {
