@@ -10,6 +10,7 @@ class ERyder {
         this.batteryLevel = 0;
         this.isAvailable = false;
         this.kmDriven = 0.0;
+        
     }
 
 
@@ -78,7 +79,6 @@ public class Main {
         System.out.println("bike1：");
         bike1.printBikeDetails();
 
-        // 2. 使用带参数的构造函数创建对象，调用ride()和printBikeDetails()
         ERyder bike2 = new ERyder(1001, 80, true, 150.5);
         System.out.println("bike2：");
         bike2.ride();
