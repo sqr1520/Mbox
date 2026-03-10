@@ -6,6 +6,7 @@ class ERyder {
     private double kmDriven;
 
     public ERyder() {
+        public static final String COMPANY_NAME = "ERyder";
         this.bikeID = 0;
         this.batteryLevel = 0;
         this.isAvailable = false;
