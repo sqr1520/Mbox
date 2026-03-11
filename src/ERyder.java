@@ -95,6 +95,18 @@ class ERyder {
     public void setKmDriven(double kmDriven) {
         this.kmDriven = kmDriven;
     }
+    public int getTotalUsagelnMinutes(){
+        return totalUsagelnMinutes;}
+    public void setTotalUsagelnMinutes(int totalUsagelnMinutes){
+        this.totalUsagelnMinutes= totalUsagelnMinutes;}
+    public double getTotalFare(){
+        return totalFare;}
+    public void setTotalFare(double totalFare) {
+        this.totalFare = totalFare;}
+    public String getLinkedAccount() {
+        return linkedAccount;}
+    public long getLinkedPhoneNumber() {
+        return linkedPhoneNumber;}
 }
 
 public class Main {
