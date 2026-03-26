@@ -6,7 +6,7 @@
         user.registration();
         System.out.println(user);
        AdminPanel adminPanel=new AdminPanel();
-         adminPanel.userMangementOptions();
+         adminPanel.userManagementOptions();
         
 
     }
