@@ -7,6 +7,7 @@ public class AdminPanel {
     private List<RegisteredUsers> registeredUserListArrayList = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
+
     public void userManagementOptions() {
         while (true) {
             System.out.println("Welcome to E-Ryder Admininstrator Panel");
@@ -16,9 +17,10 @@ public class AdminPanel {
             System.out.println("3.Remove Registered Users");
             System.out.println("4.Update Registered Users");
             System.out.println("5.EXIT");
+            System.out.println("6.Demo the Bike Rental System");
 
             if (!sc.hasNextInt()) {
-                System.out.println("Invalid choice.Please try again (enter a number 1-5)");
+                System.out.println("Invalid choice.Please try again (enter a number 1-6)");
                 sc.next();
                 continue;
             }
@@ -37,7 +39,12 @@ public class AdminPanel {
                 System.out.println("Exiting program...");
                 sc.close();
                 System.exit(0);
-            } else {
+            } 
+            else if(num==6){
+                BikeRental bikeRental=new BikeRental();
+                bikeRental.simulateApplicationlnput();
+            }
+            else {
                 System.out.println("Invalid choice.Please try again");
             }
         }
@@ -117,7 +124,6 @@ public class AdminPanel {
                 for (int a = 0; a < trips.length; a++) {
                     System.out.println("threetrips:" + trips[a]);
                 }
-                System.out.println("-------------------");
             }
         }
     }
@@ -204,4 +210,6 @@ public class AdminPanel {
 
         System.out.println("User updated successfully!");
     }
+    
 }
+
