@@ -18,6 +18,8 @@ public class AdminPanel {
             System.out.println("4.Update Registered Users");
             System.out.println("5.EXIT");
             System.out.println("6.Demo the Bike Rental System");
+            System.out.println("7.View Queue");
+            System.out.println("8.Update Queue");
 
             if (!sc.hasNextInt()) {
                 System.out.println("Invalid choice.Please try again (enter a number 1-6)");
@@ -44,6 +46,19 @@ public class AdminPanel {
                 BikeRental bikeRental=new BikeRental();
                 bikeRental.simulateApplicationlnput();
             }
+            else if(num==7){
+                ERyderLog log=new ERyderLog(null, null, null);
+                    ERyderLog log1=new ERyderLog("1","test",log.getDateTime());
+                log.pushLog("1", "test");
+                log.viewSystemLogs();
+            }
+            else if(num==8){
+                ERyderLog log=new ERyderLog(null, null, null);
+                ERyderLog log1=new ERyderLog("1","test",log.getDateTime());
+                log.pushLog("1", "test");
+                log.viewSystemLogs();
+            }
+
             else {
                 System.out.println("Invalid choice.Please try again");
             }
@@ -212,4 +227,3 @@ public class AdminPanel {
     }
     
 }
-
