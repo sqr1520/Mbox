@@ -1,9 +1,10 @@
 import java.time.LocalDateTime;
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 
 public class BikeService {
     private LinkedList<BikeDatabase> bikeDatabase;
-
+    private ArrayDeque<BikeRequest> bikeRequests = new ArrayDeque<>();  
   
     public BikeService(LinkedList<BikeDatabase> bikeDatabase) {
         this.bikeDatabase = bikeDatabase;
@@ -32,6 +33,7 @@ public class BikeService {
         System.out.println("Sorry, we're unable to reserve the bike at this time.");
         return false;
     }
+    BikeRequest request =new BikeRequest(getUserEmail(), getLocation());
 
     public boolean releaseBike(String bikeID) {
         for (BikeDatabase bike : bikeDatabase) {
@@ -45,4 +47,20 @@ public class BikeService {
         System.out.println("Bike " + bikeID + " not found in database.");
         return false;
     }
+
+    private String getLocation() {
+        throw new UnsupportedOperationException("Unimplemented method 'getLocation'");
+    }
+
+    private String getUserEmail() {
+        throw new UnsupportedOperationException("Unimplemented method 'getUserEmail'");
+    }
+
+    public Bike getBike() {
+        throw new UnsupportedOperationException("Unimplemented method 'getBike'");
+    }
 }
+
+
+
+
