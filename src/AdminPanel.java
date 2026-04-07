@@ -87,7 +87,9 @@ public class AdminPanel {
             String cvv = sc.nextLine();
             System.out.println("userType");
             String userType = sc.nextLine();
-
+            UserService userService = new UserService();
+           RegisteredUsers newUser =userService.addUser(userType, name, emailAddress, dateOfBirth, Long.parseLong(cardNumber), cardProvider, cardExpiryDate, Integer.parseInt(cvv));
+            RentalService.simulateApplicationInput(newUser);
             System.out.println("enter your last three trips");
             String[] lastThreeTrips = new String[3];
             for (int j = 0; j < 3; j++) {
@@ -112,10 +114,10 @@ public class AdminPanel {
                 lastThreeTrips[j] = trip.toString();
             }
 
-            RegisteredUsers newUser = new RegisteredUsers(name, emailAddress, dateOfBirth,
+            RegisteredUsers newUser1 = new RegisteredUsers(name, emailAddress, dateOfBirth,
                     Long.parseLong(cardNumber), cardProvider, cardExpiryDate,
                     Integer.parseInt(cvv), userType, lastThreeTrips);
-            registeredUserListArrayList.add(newUser);
+            registeredUserListArrayList.add(newUser1);
             System.out.println("User added successfully!");
         }
     }
